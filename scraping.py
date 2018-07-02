@@ -22,7 +22,7 @@ searching = ('cisco','Cisco','CISCO')
 
 for line in f.readlines():
     for word in searching:
-        if word in line:
+        if word in line.split():
             os.system('mail -s "cisco item on PDX surplus website'\
                       ' https://www.pdx.edu/surplus/items-for-sale"'\
                       ' 5035555555@vtext.com < /dev/null')
